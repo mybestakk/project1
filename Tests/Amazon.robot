@@ -18,9 +18,9 @@ User must sign in to check out
     click link  css=#result_1 > div > div > div > div.a-fixed-left-grid-col.a-col-right > div.a-row.a-spacing-small > div:nth-child(1) > a
     wait until page contains  Back to search results
     click button  id=add-to-cart-button
-    wait until page contains  Cart subtotal (1 item):
+    wait until page contains  Cart subtotal
 
-    click link  css=#hlb-ptc-btn-native
+    click button  css=#hlb-ptc-btn-native
     wait until page contains  Sign in
 
     close browser
