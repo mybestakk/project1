@@ -4,13 +4,13 @@ Documentation  This is some basic info about the whole suite
 Library  SeleniumLibrary
 
 *** Variables ***
-
+${BROWSER} =  ie
 
 *** Test Cases ***
 User must sign in to check out
     [Documentation]  This is some basic information about the test
     [Tags]  Smoke
-    open browser  http://www.amazon.com  ie
+    open browser  http://www.amazon.com  ${BROWSER}
     wait until page contains  Your Amazon.com
     input text  //*[@id="twotabsearchtextbox"]  Ferrari 458
     click button  css=#nav-search > form > div.nav-right > div > input
@@ -20,7 +20,7 @@ User must sign in to check out
     click button  id=add-to-cart-button
     wait until page contains  Cart subtotal
 
-    click button  css=#hlb-ptc-btn-native
+    click link  //*[@id="hlb-ptc-btn-native"]
     wait until page contains  Sign in
 
     close browser
